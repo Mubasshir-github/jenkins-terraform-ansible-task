@@ -15,7 +15,7 @@ pipeline {
         stage('Terraform Apply') {
     steps {
         script {
-            dir('/var/lib/jenkins/workspace/Ansible-1/jenkins-terraform-ansible-task') {
+            dir('/var/lib/jenkins/workspace/Challenge/jenkins-terraform-ansible-task') {
                 // Use withCredentials to securely access AWS credentials
                 withCredentials([[$class: 'UsernamePasswordMultiBinding',
                                  credentialsId: 'AWS_Credentials',
